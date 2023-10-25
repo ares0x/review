@@ -84,3 +84,12 @@ struct 是否可以比较？什么类型不能比较
   - struct 中含有不可比较的成员（如 Slice），则该 struct 不可以比较
 
 不可比较的类型：slice，map
+
+线上程序 CPU / 内存 占用过高定位，排查与解决
+(https://www.infoq.cn/article/f69uvzjuomq276hbp1qb)
+(https://xie.infoq.cn/article/a94a46596a14cc6578d7e8ad4)
+cpu 占用 99% -> 发现 GC 线程占用率持续异常 -> 怀疑是内存问题 -> 排查对象数量 -> 定位产生对象异常多的接口 -> 定位到某接口 -> 在日志中找到此接口的异常请求 -> 根据异常参数排查代码中的问题 -> 定位到问题
+程序性能问题分析
+
+runtime/pprof (用于工具类型，一次性)
+net/http/pprof （用于服务类型，一直运行）

@@ -1,7 +1,5 @@
-# bubble-sort
+package algorithm
 
-```golang
 func bubbleSort(nums []int) []int{
 
 }
-```

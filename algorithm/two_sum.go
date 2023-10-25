@@ -1,6 +1,5 @@
-# two-sum
+package algorithm
 
-```golang
 func twoSum(nums []int, targe)[]int {
     tmp := make(map[int]int)
     for i, v := range nums{
@@ -11,4 +10,3 @@ func twoSum(nums []int, targe)[]int {
     }
     return nil
 }
-```
